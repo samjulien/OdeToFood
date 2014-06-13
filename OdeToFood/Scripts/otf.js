@@ -28,6 +28,8 @@
         var $form = $input.parents("form:first");
         $form.submit();
 
+        return false;
+
     };
 
     var createAutocomplete = function () {
