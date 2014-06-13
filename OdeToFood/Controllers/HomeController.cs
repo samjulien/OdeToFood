@@ -8,6 +8,7 @@ using PagedList;
 
 namespace OdeToFood.Controllers
 {
+   
     public class HomeController : Controller
     {
         OdeToFoodDb _db = new OdeToFoodDb();
@@ -27,6 +28,7 @@ namespace OdeToFood.Controllers
 
         }
 
+           
         public ActionResult Index(string searchTerm = null, int page = 1)
         {
 
@@ -50,6 +52,7 @@ namespace OdeToFood.Controllers
 
             return View(model);
         }
+
 
         public ActionResult About()
         {

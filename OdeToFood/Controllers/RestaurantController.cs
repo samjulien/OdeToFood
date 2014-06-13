@@ -24,7 +24,7 @@ namespace OdeToFood.Controllers
         //
 
         // GET: /Restaurant/Create
-
+        [Authorize(Roles="admin")]
         public ActionResult Create()
         {
             return View();
@@ -34,6 +34,7 @@ namespace OdeToFood.Controllers
         // POST: /Restaurant/Create
 
         [HttpPost]
+        [Authorize(Roles="admin")]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Restaurant restaurant)
         {
