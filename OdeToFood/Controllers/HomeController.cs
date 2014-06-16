@@ -28,9 +28,10 @@ namespace OdeToFood.Controllers
 
         }
 
-           
+      
+        [OutputCache(Duration = 360)]   
         public ActionResult Index(string searchTerm = null, int page = 1)
-        {
+         {
 
             var model = 
                 _db.Restaurants
