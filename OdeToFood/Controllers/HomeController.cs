@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using PagedList;
+using System.Web.UI;
 
 namespace OdeToFood.Controllers
 {
@@ -29,7 +30,7 @@ namespace OdeToFood.Controllers
         }
 
       
-        [OutputCache(Duration = 360)]   
+        [OutputCache(CacheProfile="Long", VaryByHeader = "X-Requested-With; Accept-Language", Location = OutputCacheLocation.Server)]   
         public ActionResult Index(string searchTerm = null, int page = 1)
          {
 
